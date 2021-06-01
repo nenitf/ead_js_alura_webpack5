@@ -8,6 +8,14 @@ module.exports = {
     path: path.resolve(__dirname, 'app/dist'),
     clean: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['css-loader']
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './app/src/app.html',

@@ -21,7 +21,10 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerWebpackPlugin()]
+    minimizer: [
+      new CssMinimizerWebpackPlugin(),
+      '...' // utiliza restantes minimizers defaults do webpack
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
